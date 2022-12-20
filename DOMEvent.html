@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM events</h1>
+    <p>
+      When a user clicks something: onclick event When a user hovers over
+      something: onmouseover event When a user changes a form (input) field:
+      onchange event
+    </p>
+    <p>https://www.w3schools.com/js/js_htmldom_events.asp</p>
+
+    <p>
+      <button id="my-button">Click Me!</button>
+    </p>
+    <p>
+      or call directly on the html
+
+      <button onclick="alert('clicked!!')">Click Me!</button>
+    </p>
+
+    <h2>
+      reaction to click with custom funcitons const buttonClicked =
+      function(selector) { alert('The ' + selector + ' button has been
+      clicked.'); }
+    </h2>
+    <p>
+      <button id="my-button" onclick="buttonClicked('#my-button')">
+        Click Me!
+      </button>
+    </p>
+
+    <p>
+      <button onclick="displayDate()">The time is?</button>
+    </p>
+    <h3 onclick="changeText(this)">Click on this text!</h3>
+
+    <p>
+      <button id="mybutton">Try it</button>
+    </p>
+  </body>
+  <script>
+   
+
+    //reaction to clicks
+    
+    <button id="my-button" onclick="alert('Clicked!!')">
+      Click Me!
+    </button>;
+
+    //custom click
+    
+    const buttonClicked = function (selector) {
+      alert("The " + selector + " button has been clicked.");
+    };
+
+    //display date
+    
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+
+    //change id of a button
+    
+    function changeText(id) {
+      id.innerHTML = "Ooops!";
+    }
+
+    //add event listener
+    
+    document.getElementById("mybutton").addEventListener("click", displayDate);
+
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+    
+    // https://jsfiddle.net/Seaf38/khzqwe8b/4/
+    
+  </script>
+</html>
