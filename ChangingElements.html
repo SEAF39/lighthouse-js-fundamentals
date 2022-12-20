@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>changing elements' content using .innerHTML</h1>
+    <h2>first exercise working with innerHTML and setTimeout</h2>
+    <img id="lhl-logo" src="http://bit.ly/29O2uM2" width="400" />
+
+    <h2>second exercise</h2>
+    <p id="intro">Hello World!</p>
+
+    <p id="info">JavaScript on The DOM</p>
+
+    <h2>third exercise adding new attributes</h2>
+    <input id="name" />
+
+    <script>
+    
+      // lhl logo
+      
+      document.getElementById("lhl-logo").width = "300";
+
+      document.getElementById("lhl-logo").width = "200";
+      
+      const sayHello = function () {
+      
+      document.getElementById("lhl-logo").width = "400";
+      };
+      setTimeout(sayHello, 2000);
+
+      // innerHTML
+
+      let elm = document.getElementById("info");
+      // then we set it's innerHTML property
+      elm.innerHTML = "JavaScript Rocks!";
+
+      //third exercise
+      // document.querySelector('#name-field').setAttribute('placeholder', 'Jane Doe');
+  
+      https: document
+        .querySelector("#name")
+        .setAttribute("placeholder", "interesting");
+    </script>
+  </body>
+</html>
