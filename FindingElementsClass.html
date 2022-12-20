@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .name {
+      font-size: 16px;
+      font-weight: lighter;
+      line-height: 26px;
+    }
+  </style>
+  <body>
+    <h1>Find Elements by class name</h1>
+    <h2>List of People:</h2>
+
+    <ul class="people">
+      <li class="name">Clara</li>
+      <li class="name">James</li>
+      <li class="name">Sara</li>
+    </ul>
+
+    An element can also have numerous classes separated by spaces.
+
+    <p id="paragragh-one" class="blue large"></p>
+    <p id="paragragh-two" class="blue large"></p>
+    <p id="paragragh-tree" class="blue small"></p>
+    <p id="paragragh-four" class="blue small"></p>
+    Those classes can be used to find elements with JavaScript using the
+    document.getElementsByClassName method.
+    document.getElementsByClassName('blue');
+    document.getElementsByClassName('blue large');
+  </body>
+  
+  <script>
+
+    function myFunction() {
+      let names = [];
+      let elm = document.getElementsByClassName("name");
+      let i;
+      for (i = 0; i < elm.length; i++) {
+        console.log(elm[i].innerHTML);
+        names.push(elm[i].innerHTML);
+      }
+      alert(names);
+    }
+
+    myFunction();
+
+    // https://jsfiddle.net/Seaf38/7Lqofkb5/3/
+
+  </script>
+</html>
